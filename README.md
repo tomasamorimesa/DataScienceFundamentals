@@ -35,6 +35,8 @@ Some weeks add an `extra/` folder for supplementary material.
 The notebooks are plain Jupyter notebooks (no Colab-specific mounting steps). To run them locally:
 
 ```bash
+python -m venv venv
+source venv/bin/activate  # venv\Scripts\activate on Windows
 pip install -r requirements.txt
 jupyter notebook
 ```
@@ -43,10 +45,10 @@ Open the relevant week's notebook and run the cells in order. Where a notebook r
 
 ## Dependencies
 
-Core libraries used across the weeks: `numpy`, `pandas`, `matplotlib`, `seaborn`, `scikit-learn`. If a `requirements.txt` isn't present yet, these can be installed directly:
+`requirements.txt` covers everything the notebooks import: `jupyter`, `numpy`, `pandas`, `matplotlib`, `seaborn`, `scipy`, `scikit-learn`.
 
 ```bash
-pip install numpy pandas matplotlib seaborn scikit-learn jupyter
+pip install -r requirements.txt
 ```
 
 ## Course
